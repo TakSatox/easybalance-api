@@ -24,7 +24,7 @@ import lombok.RequiredArgsConstructor;
 @Validated
 public class CategoryController {
     
-    private final CategoryService categoryService;
+    private final CategoryService service;
 
 
     @Operation(summary = "List Categories", description = "List all categories")
@@ -33,7 +33,7 @@ public class CategoryController {
     })
     @GetMapping
     public List<CategoryResponse> listCategories() {
-        return CategoryResponse.fromList(categoryService.getCategories());
+        return CategoryResponse.fromList(service.getCategories());
     }
 
 

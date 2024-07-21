@@ -19,18 +19,18 @@ import lombok.NoArgsConstructor;
 @Builder
 @Data
 @Entity
-@Table(name = "category")
+@Table(name = "EB_T2_CATEGORY")
 @NoArgsConstructor
 @DynamicUpdate
 public class Category {
 
     @Id
-    @Column(name = "id")
-    @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "category_id_seq_gen")
-    @SequenceGenerator(name = "category_id_seq_gen", sequenceName = "category_id_seq", allocationSize = 1)
+    @Column(name = "T2_ID")
+    @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "T2_CATEGORY_ID_SEQ_GEN")
+    @SequenceGenerator(name = "T2_CATEGORY_ID_SEQ_GEN", sequenceName = "T2_CATEGORY_ID_SEQ", allocationSize = 1)
     private Long id;
 
-    @Column(name = "title")
+    @Column(name = "T2_TITLE")
     private String title;
 
 }

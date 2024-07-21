@@ -26,32 +26,41 @@ import lombok.NoArgsConstructor;
 @Builder
 @Data
 @Entity
-@Table(name = "transaction")
+@Table(name = "EB_T3_TRANSACTION")
 @NoArgsConstructor
 @DynamicUpdate
 public class Transaction {
     
     @Id
-    @Column(name = "id")
-    @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "transaction_id_seq_gen")
-    @SequenceGenerator(name = "transaction_id_seq_gen", sequenceName = "transaction_id_seq", allocationSize = 1)
+    @Column(name = "T3_ID")
+    @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "T3_TRANSACTION_ID_SEQ_GEN")
+    @SequenceGenerator(name = "T3_TRANSACTION_ID_SEQ_GEN", sequenceName = "T3_TRANSACTION_ID_SEQ", allocationSize = 1)
     private Long id;
 
-    @Column(name = "t_type")
+    @Column(name = "T3_TITLE")
+    private String title;
+
+    @Column(name = "T3_DESCRIPTION")
+    private String description;
+
+    @Column(name = "T3_PAYMENT_METHOD")
+    private String paymentMethod;
+
+    @Column(name = "T3_TYPE")
     private String type;
 
-    @Column(name = "initial_date")
+    @Column(name = "T3_INITIAL_DATE")
     private LocalDate initialDate;
 
-    @Column(name = "end_date")
+    @Column(name = "T3_END_DATE")
     private LocalDate endDate;
 
     @ManyToOne
-    @JoinColumn(name = "category_id")
+    @JoinColumn(name = "T3_T2_CATEGORY_ID")
     private Category category;
 
     @ManyToOne
-    @JoinColumn(name = "user_id")
+    @JoinColumn(name = "T3_T1_USER_ID")
     private User user;
 
     
