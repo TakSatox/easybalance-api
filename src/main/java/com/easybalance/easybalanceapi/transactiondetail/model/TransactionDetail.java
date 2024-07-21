@@ -11,6 +11,7 @@ import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.persistence.JoinColumn;
 import jakarta.persistence.ManyToOne;
+import jakarta.persistence.SequenceGenerator;
 import jakarta.persistence.Table;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
@@ -29,7 +30,8 @@ public class TransactionDetail {
     
     @Id
     @Column(name = "id")
-    @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "transaction_detail_id_seq")
+    @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "transaction_detail_id_seq_gen")
+    @SequenceGenerator(name = "transaction_detail_id_seq_gen", sequenceName = "transaction_detail_id_seq", allocationSize = 1)
     private Long id;
 
     @Column(name = "title")
@@ -38,17 +40,17 @@ public class TransactionDetail {
     @Column(name = "description")
     private String description;
 
-    @Column(name = "month")
+    @Column(name = "t_month")
     private Integer month;
 
-    @Column(name = "year")
+    @Column(name = "t_year")
     private Integer year;
 
     @Column(name = "payment_method")
     private String paymentMethod;
 
     @Column(name = "installment")
-    private String installment;
+    private Integer installment;
 
     @Column(name = "value")
     private Float value;
