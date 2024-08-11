@@ -19,21 +19,21 @@ import lombok.NoArgsConstructor;
 @Builder
 @Data
 @Entity
-@Table(name = "user")
+@Table(name = "EB_T1_USER")
 @NoArgsConstructor
 @DynamicUpdate
 public class User {
     
     @Id
-    @Column(name = "id")
-    @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "user_id_seq_gen")
-    @SequenceGenerator(name = "user_id_seq_gen", sequenceName = "user_id_seq", allocationSize = 1)
+    @Column(name = "T1_ID")
+    @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "T1_USER_ID_SEQ_GEN")
+    @SequenceGenerator(name = "T1_USER_ID_SEQ_GEN", sequenceName = "T1_USER_ID_SEQ", allocationSize = 1)
     private Long id;
 
-    @Column(name = "email")
+    @Column(name = "T1_EMAIL")
     private String email;
 
-    @Column(name = "u_name")
+    @Column(name = "T1_NAME")
     private String name;
 
 

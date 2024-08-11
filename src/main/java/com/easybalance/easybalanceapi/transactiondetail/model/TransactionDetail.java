@@ -23,43 +23,34 @@ import lombok.NoArgsConstructor;
 @Builder
 @Data
 @Entity
-@Table(name = "transaction_detail")
+@Table(name = "EB_T4_TRANSACTION_DETAIL")
 @NoArgsConstructor
 @DynamicUpdate
 public class TransactionDetail {
     
     @Id
-    @Column(name = "id")
-    @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "transaction_detail_id_seq_gen")
-    @SequenceGenerator(name = "transaction_detail_id_seq_gen", sequenceName = "transaction_detail_id_seq", allocationSize = 1)
+    @Column(name = "T4_ID")
+    @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "T4_TRANSACTION_DETAIL_ID_SEQ_GEN")
+    @SequenceGenerator(name = "T4_TRANSACTION_DETAIL_ID_SEQ_GEN", sequenceName = "T4_TRANSACTION_DETAIL_ID_SEQ", allocationSize = 1)
     private Long id;
 
-    @Column(name = "title")
-    private String title;
-
-    @Column(name = "description")
-    private String description;
-
-    @Column(name = "t_month")
+    @Column(name = "T4_MONTH")
     private Integer month;
 
-    @Column(name = "t_year")
+    @Column(name = "T4_YEAR")
     private Integer year;
 
-    @Column(name = "payment_method")
-    private String paymentMethod;
-
-    @Column(name = "installment")
+    @Column(name = "T4_INSTALLMENT")
     private Integer installment;
 
-    @Column(name = "value")
+    @Column(name = "T4_VALUE")
     private Float value;
 
-    @Column(name = "paid")
-    private Boolean paid;
+    @Column(name = "T4_PAID")
+    private Boolean isPaid;
 
     @ManyToOne
-    @JoinColumn(name = "transaction_id")
+    @JoinColumn(name = "T4_T3_TRANSACTION_ID")
     private Transaction transaction;
 
 }
