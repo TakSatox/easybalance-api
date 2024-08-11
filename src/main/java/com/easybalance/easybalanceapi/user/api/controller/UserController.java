@@ -41,6 +41,17 @@ public class UserController {
         return UserResponse.fromList(service.getAll());
     }
 
+    @Operation(summary = "Get User", description = "Get user info")
+    @ApiResponses(value = {
+        @ApiResponse(responseCode = "200", description = "OK")
+    })
+    @GetMapping("/{email}")
+    public UserResponse get(
+        @PathVariable("email") String email
+    ) {
+        return UserResponse.from(service.getByEmail(email));
+    }
+
     @Operation(summary = "Add User", description = "Add a user")
     @ApiResponses(value = {
         @ApiResponse(responseCode = "201", description = "CREATED")
@@ -55,9 +66,9 @@ public class UserController {
     @ApiResponses(value = {
         @ApiResponse(responseCode = "200", description = "OK")
     })
-    @DeleteMapping("/{email}")
-    public void delete(@PathVariable("email") String email) {
-        service.deleteByEmail(email);
+    @DeleteMapping("/{id}")
+    public void delete(@PathVariable("id") Long id) {
+        service.deleteById(id);
     }
 
 }

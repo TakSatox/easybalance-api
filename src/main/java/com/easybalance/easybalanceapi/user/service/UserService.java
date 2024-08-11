@@ -16,15 +16,6 @@ public class UserService {
     
     private final UserRepository repository;
 
-
-    public List<User> getAll() {
-        return repository.findAll();
-    }
-
-    public User getByEmail(String email) {
-        return repository.findByEmail(email);
-    }
-
     public User save(CreateUserRequest request) {
         return repository.save(
             User.builder()
@@ -34,7 +25,19 @@ public class UserService {
         );
     }
 
-    public void delete(Long id) {
+    public List<User> getAll() {
+        return repository.findAll();
+    }
+
+    public User getById(Long id) {
+        return repository.findById(id).orElse(null);
+    }
+
+    public User getByEmail(String email) {
+        return repository.findByEmail(email).orElse(null);
+    }
+
+    public void deleteById(Long id) {
         repository.deleteById(id);
     }
 
