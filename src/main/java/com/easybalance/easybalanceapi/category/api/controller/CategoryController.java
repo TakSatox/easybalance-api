@@ -1,10 +1,5 @@
 package com.easybalance.easybalanceapi.category.api.controller;
 
-import io.swagger.v3.oas.annotations.Operation;
-import io.swagger.v3.oas.annotations.responses.ApiResponse;
-import io.swagger.v3.oas.annotations.responses.ApiResponses;
-import io.swagger.v3.oas.annotations.tags.Tag;
-
 import java.util.List;
 
 import org.springframework.validation.annotation.Validated;
@@ -15,7 +10,13 @@ import org.springframework.web.bind.annotation.RestController;
 import com.easybalance.easybalanceapi.category.api.response.CategoryResponse;
 import com.easybalance.easybalanceapi.category.service.CategoryService;
 
+import io.swagger.v3.oas.annotations.Operation;
+import io.swagger.v3.oas.annotations.responses.ApiResponse;
+import io.swagger.v3.oas.annotations.responses.ApiResponses;
+import io.swagger.v3.oas.annotations.tags.Tag;
 import lombok.RequiredArgsConstructor;
+
+
 
 @RestController
 @RequestMapping("api/v1/categories")
@@ -33,8 +34,9 @@ public class CategoryController {
     })
     @GetMapping
     public List<CategoryResponse> listCategories() {
-        return CategoryResponse.fromList(service.getCategories());
+        return CategoryResponse.fromList(service.getAll());
     }
+    
 
 
 }
