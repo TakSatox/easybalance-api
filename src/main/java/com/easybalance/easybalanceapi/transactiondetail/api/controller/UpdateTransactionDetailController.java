@@ -20,7 +20,7 @@ import lombok.RequiredArgsConstructor;
 @RestController
 @RequestMapping("api/v1/transactions/details")
 @RequiredArgsConstructor
-@Tag(name = "Update Transaction Detail")
+@Tag(name = "Transactions Details")
 @Validated
 public class UpdateTransactionDetailController {
 
