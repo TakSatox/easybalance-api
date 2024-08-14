@@ -29,7 +29,7 @@ public class UserExpensesController {
     @ApiResponses(value = {
         @ApiResponse(responseCode = "200", description = "OK")
     })
-    @GetMapping("/{id}/categories")
+    @GetMapping("/{id}/categories/expenses")
     public List<CategoryExpensesByUserResponse> listCategoriesByUser(
         @PathVariable("id") Long id,
         @RequestParam Integer month,
