@@ -4,8 +4,8 @@ import java.util.List;
 
 import org.springframework.stereotype.Service;
 
-import com.easybalance.easybalanceapi.transaction.model.Transaction;
-import com.easybalance.easybalanceapi.transaction.model.TransactionRepository;
+import com.easybalance.easybalanceapi.transaction.model.entity.Transaction;
+import com.easybalance.easybalanceapi.transaction.model.repository.TransactionRepository;
 
 import lombok.RequiredArgsConstructor;
 
@@ -27,6 +27,9 @@ public class TransactionService {
     public List<Transaction> getByUserEmail(String email) {
         return repository.findByUser_Email(email);
     }
-    
+
+    public void deleteById(Long id) {
+        repository.deleteById(id);
+    }
 
 }

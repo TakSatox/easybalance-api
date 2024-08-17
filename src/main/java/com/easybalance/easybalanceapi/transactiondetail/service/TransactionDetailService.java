@@ -7,9 +7,9 @@ import java.util.stream.Collectors;
 
 import org.springframework.stereotype.Service;
 
-import com.easybalance.easybalanceapi.transactiondetail.model.TransactionDetail;
-import com.easybalance.easybalanceapi.transactiondetail.model.TransactionDetailRepository;
 import com.easybalance.easybalanceapi.transactiondetail.model.dto.TransactionDetailTotalValueDto;
+import com.easybalance.easybalanceapi.transactiondetail.model.entity.TransactionDetail;
+import com.easybalance.easybalanceapi.transactiondetail.model.repository.TransactionDetailRepository;
 
 import lombok.RequiredArgsConstructor;
 

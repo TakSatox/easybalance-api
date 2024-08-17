@@ -1,4 +1,4 @@
-package com.easybalance.easybalanceapi.transaction.api.controller;
+package com.easybalance.easybalanceapi.transaction.api.request;
 
 import java.time.LocalDate;
 

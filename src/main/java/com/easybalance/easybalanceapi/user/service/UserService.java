@@ -4,9 +4,9 @@ import java.util.List;
 
 import org.springframework.stereotype.Service;
 
-import com.easybalance.easybalanceapi.user.api.controller.CreateUserRequest;
-import com.easybalance.easybalanceapi.user.model.User;
-import com.easybalance.easybalanceapi.user.model.UserRepository;
+import com.easybalance.easybalanceapi.user.api.request.CreateUserRequest;
+import com.easybalance.easybalanceapi.user.model.entity.User;
+import com.easybalance.easybalanceapi.user.model.repository.UserRepository;
 
 import lombok.RequiredArgsConstructor;
 

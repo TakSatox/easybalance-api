@@ -2,7 +2,7 @@ package com.easybalance.easybalanceapi.user.api.response;
 
 import java.util.List;
 
-import com.easybalance.easybalanceapi.user.model.User;
+import com.easybalance.easybalanceapi.user.model.entity.User;
 
 import io.swagger.v3.oas.annotations.media.Schema;
 import lombok.Builder;

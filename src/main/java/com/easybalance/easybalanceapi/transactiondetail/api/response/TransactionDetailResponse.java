@@ -2,8 +2,8 @@ package com.easybalance.easybalanceapi.transactiondetail.api.response;
 
 import java.util.List;
 
-import com.easybalance.easybalanceapi.transaction.model.Transaction;
-import com.easybalance.easybalanceapi.transactiondetail.model.TransactionDetail;
+import com.easybalance.easybalanceapi.transaction.model.entity.Transaction;
+import com.easybalance.easybalanceapi.transactiondetail.model.entity.TransactionDetail;
 
 import io.swagger.v3.oas.annotations.media.Schema;
 import lombok.Builder;
