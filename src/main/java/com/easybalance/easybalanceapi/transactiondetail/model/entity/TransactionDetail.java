@@ -1,8 +1,8 @@
-package com.easybalance.easybalanceapi.transactiondetail.model;
+package com.easybalance.easybalanceapi.transactiondetail.model.entity;
 
 import org.hibernate.annotations.DynamicUpdate;
 
-import com.easybalance.easybalanceapi.transaction.model.Transaction;
+import com.easybalance.easybalanceapi.transaction.model.entity.Transaction;
 
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;

@@ -1,8 +1,10 @@
-package com.easybalance.easybalanceapi.transactiondetail.model;
+package com.easybalance.easybalanceapi.transactiondetail.model.repository;
 
 import java.util.List;
 
 import org.springframework.data.jpa.repository.JpaRepository;
+
+import com.easybalance.easybalanceapi.transactiondetail.model.entity.TransactionDetail;
 
 public interface TransactionDetailRepository extends JpaRepository<TransactionDetail, Long>{
     

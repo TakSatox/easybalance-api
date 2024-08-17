@@ -1,12 +1,15 @@
-package com.easybalance.easybalanceapi.transaction.model;
+package com.easybalance.easybalanceapi.transaction.model.entity;
 
 import java.time.LocalDate;
+import java.util.List;
 
 import org.hibernate.annotations.DynamicUpdate;
 
-import com.easybalance.easybalanceapi.category.model.Category;
-import com.easybalance.easybalanceapi.user.model.User;
+import com.easybalance.easybalanceapi.category.model.entity.Category;
+import com.easybalance.easybalanceapi.transactiondetail.model.entity.TransactionDetail;
+import com.easybalance.easybalanceapi.user.model.entity.User;
 
+import jakarta.persistence.CascadeType;
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
@@ -14,6 +17,7 @@ import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.persistence.JoinColumn;
 import jakarta.persistence.ManyToOne;
+import jakarta.persistence.OneToMany;
 import jakarta.persistence.SequenceGenerator;
 import jakarta.persistence.Table;
 import lombok.AllArgsConstructor;
@@ -62,9 +66,8 @@ public class Transaction {
     @ManyToOne
     @JoinColumn(name = "T3_T1_USER_ID")
     private User user;
-
     
-    // @OneToMany(mappedBy = "transaction", cascade = CascadeType.REMOVE)
-    // private List<TransactionDetail> transactionItems;
+    @OneToMany(mappedBy = "transaction", cascade = CascadeType.REMOVE)
+    private List<TransactionDetail> transactionDetails;
     
 }

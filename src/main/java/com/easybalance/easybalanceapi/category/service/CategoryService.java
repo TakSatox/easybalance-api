@@ -4,8 +4,8 @@ import java.util.List;
 
 import org.springframework.stereotype.Service;
 
-import com.easybalance.easybalanceapi.category.model.Category;
-import com.easybalance.easybalanceapi.category.model.CategoryRepository;
+import com.easybalance.easybalanceapi.category.model.entity.Category;
+import com.easybalance.easybalanceapi.category.model.repository.CategoryRepository;
 
 import lombok.RequiredArgsConstructor;
 

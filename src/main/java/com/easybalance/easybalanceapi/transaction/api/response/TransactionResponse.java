@@ -3,7 +3,7 @@ package com.easybalance.easybalanceapi.transaction.api.response;
 import java.time.LocalDate;
 import java.util.List;
 
-import com.easybalance.easybalanceapi.transaction.model.Transaction;
+import com.easybalance.easybalanceapi.transaction.model.entity.Transaction;
 
 import io.swagger.v3.oas.annotations.media.Schema;
 import lombok.Builder;

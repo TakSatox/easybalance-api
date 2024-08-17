@@ -1,4 +1,4 @@
-package com.easybalance.easybalanceapi.transactiondetail.api.controller;
+package com.easybalance.easybalanceapi.transactiondetail.api.request;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;
@@ -9,7 +9,7 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 @Builder
 @Data
-public class TransactionDetailUpdateIsPaidRequest {
+public class TransactionDetailIsPaidRequest {
     
     private Boolean isPaid;
 

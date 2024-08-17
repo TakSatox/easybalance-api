@@ -6,8 +6,8 @@ import java.util.List;
 
 import org.springframework.stereotype.Service;
 
-import com.easybalance.easybalanceapi.transaction.model.Transaction;
-import com.easybalance.easybalanceapi.transactiondetail.model.TransactionDetail;
+import com.easybalance.easybalanceapi.transaction.model.entity.Transaction;
+import com.easybalance.easybalanceapi.transactiondetail.model.entity.TransactionDetail;
 
 import lombok.RequiredArgsConstructor;
 

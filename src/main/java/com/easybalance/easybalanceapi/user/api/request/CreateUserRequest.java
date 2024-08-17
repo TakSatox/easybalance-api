@@ -1,4 +1,4 @@
-package com.easybalance.easybalanceapi.user.api.controller;
+package com.easybalance.easybalanceapi.user.api.request;
 
 import io.swagger.v3.oas.annotations.media.Schema;
 import lombok.Builder;

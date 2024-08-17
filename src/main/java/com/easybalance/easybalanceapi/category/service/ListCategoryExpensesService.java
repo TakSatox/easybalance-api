@@ -6,7 +6,7 @@ import java.util.stream.Collectors;
 import org.springframework.stereotype.Service;
 
 import com.easybalance.easybalanceapi.category.model.dto.UserCategoryExpensesDto;
-import com.easybalance.easybalanceapi.transactiondetail.model.TransactionDetail;
+import com.easybalance.easybalanceapi.transactiondetail.model.entity.TransactionDetail;
 import com.easybalance.easybalanceapi.transactiondetail.service.TransactionDetailService;
 import com.easybalance.easybalanceapi.user.service.UserService;
 

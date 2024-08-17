@@ -3,8 +3,8 @@ package com.easybalance.easybalanceapi.transaction.service;
 import org.springframework.stereotype.Service;
 
 import com.easybalance.easybalanceapi.category.service.CategoryService;
-import com.easybalance.easybalanceapi.transaction.api.controller.CreateTransactionRequest;
-import com.easybalance.easybalanceapi.transaction.model.Transaction;
+import com.easybalance.easybalanceapi.transaction.api.request.CreateTransactionRequest;
+import com.easybalance.easybalanceapi.transaction.model.entity.Transaction;
 import com.easybalance.easybalanceapi.transactiondetail.service.CreateTransactionDetailService;
 import com.easybalance.easybalanceapi.user.service.UserService;
 

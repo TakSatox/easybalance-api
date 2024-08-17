@@ -9,6 +9,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseStatus;
 import org.springframework.web.bind.annotation.RestController;
 
+import com.easybalance.easybalanceapi.transactiondetail.api.request.TransactionDetailIsPaidRequest;
 import com.easybalance.easybalanceapi.transactiondetail.service.TransactionDetailService;
 
 import io.swagger.v3.oas.annotations.Operation;
@@ -22,7 +23,7 @@ import lombok.RequiredArgsConstructor;
 @RequiredArgsConstructor
 @Tag(name = "Transactions Details")
 @Validated
-public class UpdateTransactionDetailController {
+public class TransactionDetailController {
 
     private final TransactionDetailService service;
 
@@ -33,7 +34,7 @@ public class UpdateTransactionDetailController {
     @ResponseStatus(HttpStatus.NO_CONTENT)
     @PatchMapping("/{id}/paid") void updateIsPaid(
         @PathVariable("id") Long id,
-        @RequestBody TransactionDetailUpdateIsPaidRequest request
+        @RequestBody TransactionDetailIsPaidRequest request
     ) {
         service.updateIsPaid(id, request.getIsPaid());
     }

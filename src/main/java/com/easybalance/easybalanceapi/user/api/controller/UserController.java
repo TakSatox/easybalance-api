@@ -13,6 +13,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseStatus;
 import org.springframework.web.bind.annotation.RestController;
 
+import com.easybalance.easybalanceapi.user.api.request.CreateUserRequest;
 import com.easybalance.easybalanceapi.user.api.response.UserResponse;
 import com.easybalance.easybalanceapi.user.service.UserService;
 

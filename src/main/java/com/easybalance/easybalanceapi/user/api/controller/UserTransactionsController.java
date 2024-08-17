@@ -10,7 +10,7 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.easybalance.easybalanceapi.transaction.api.controller.CreateTransactionRequest;
+import com.easybalance.easybalanceapi.transaction.api.request.CreateTransactionRequest;
 import com.easybalance.easybalanceapi.transaction.api.response.TransactionResponse;
 import com.easybalance.easybalanceapi.transaction.service.CreateTransactionService;
 import com.easybalance.easybalanceapi.transaction.service.TransactionService;
@@ -60,8 +60,5 @@ public class UserTransactionsController {
     ) {
         return TransactionResponse.from(createService.create(request, id));
     }
-
-
-
 
 }
