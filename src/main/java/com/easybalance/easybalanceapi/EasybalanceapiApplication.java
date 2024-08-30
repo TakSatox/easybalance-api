@@ -7,11 +7,7 @@ import io.swagger.v3.oas.annotations.OpenAPIDefinition;
 import io.swagger.v3.oas.annotations.servers.Server;
 
 @SpringBootApplication
-@OpenAPIDefinition(
-	servers = {
-		@Server(url = "/", description = "Default server URL")
-	}
-)
+@OpenAPIDefinition(servers = {@Server(url = "/", description = "Default server URL")})
 public class EasybalanceapiApplication {
 
 	public static void main(String[] args) {
